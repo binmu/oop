@@ -20,4 +20,17 @@ public class Student {
 	public String province;  //学生所属省份
 	public String city;      //所属城市
 	public String address;   //家庭住址
+	
+	public String state;    //学生目前的状态，是否开除，是否休学等
+	
+	public Student() {
+		
+	}
+	
+	public Student(String name,char sex,int age) {
+		this.name = name;
+		this.sex = sex;
+		this.age = age;
+	}
+	
 }

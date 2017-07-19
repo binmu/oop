@@ -7,7 +7,10 @@ public class School {
 	
 	public Student[] stus = new Student[100];
 	
-	public void addStudent(int ststudentNo) {
-		
+	public void addStudent(Student student) {  //Ìí¼ÓÑ§Éú
+		if(this.studentActNum<this.stus.length) {
+			
+			//System.out.println("");
+		}
 	}
 }
