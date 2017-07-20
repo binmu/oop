@@ -1,5 +1,6 @@
 package com.iGeekHome.homework;
 
+
 /**
  * OOP练习：做一个简单学生学籍管理系统，用一个学校作为载体
  * 可以进行入学学生、休学学生、开除学生、查看学生信息等操作，
@@ -13,7 +14,17 @@ package com.iGeekHome.homework;
 public class SchoolStudentSys {
 	
 	public static void main(String[] args) {
+		//school.addStudent(  Student());
+//		StudentClass studentClass = new StudentClass();
+//		studentClass.setStudentClassName("32营");
+//		studentClass.setStuClassOpenTime("2017年7月11日");
+//		studentClass.setStuClassAdress("巨蟹座");
 		
+		Student stu = new Student();
+		
+		School school = new School();
+		school.addStudent("2014143136");
+		school.show("2014143136");
 	}
 
 }
