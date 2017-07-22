@@ -8,18 +8,40 @@ package com.iGeekHome.homework;
  */
 public class StudentClass {
 
+	private String classNo;
 	private String studentClassName;
 	private String stuClassOpenTime;
 	private String stuClassAdress;
 	
 	public StudentClass() {
-		
+		//Student School.stus[0] = new Student();
 	}
 
-	public StudentClass(String studentClassName,String stuClassOpenTime,String stuClassAdress) {
+	public StudentClass(String classNo,String studentClassName,String stuClassOpenTime,String stuClassAdress) {
+		this.classNo = classNo;
 		this.studentClassName = studentClassName;
 		this.stuClassOpenTime = stuClassOpenTime;
 		this.stuClassAdress = stuClassAdress;
+	}
+	
+	public void addStudent(String studentNo,String name,char sex,int age,String subject,String state) {  //添加学生
+		if(School.studentActNum>=School.stus.length) {
+			System.out.println("人数已满！！！");
+			}
+		if(School.sortSudent(studentNo)>=0) {
+			System.out.println("学号冲突，添加失败！！！");
+		}
+		Student stu = new Student();
+		stu.setStudentNo(studentNo);
+		stu.setAge(age);
+		stu.setName(name);
+		stu.setSex(sex);
+		stu.setState(state);
+		stu.setSubject(subject);
+		//stu.setStuClass(stuClassAdress);
+		School.studentActNum++;
+		School.stus[School.studentActNum -1] =stu;
+		System.out.println("添加成功！！！");
 	}
 	
 	public String getStudentClassName() {
@@ -44,5 +66,13 @@ public class StudentClass {
 
 	public void setStuClassAdress(String stuClassAdress) {
 		this.stuClassAdress = stuClassAdress;
+	}
+
+	public String getClassNo() {
+		return classNo;
+	}
+
+	public void setClassNo(String classNo) {
+		this.classNo = classNo;
 	}
 }

@@ -40,4 +40,24 @@ public class StudentProvince {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	
+	public static void provinceSort(String province) {
+		for(int count=0;count<School.studentActNum;count++) {
+			if(School.stus[count].stuProvince.getProvince().equals(province)) {
+				School.show(count);
+			}else {
+				School.show(-1);
+			}
+		}
+	}
+	
+	public static void citySort(String city) {
+		for(int count=0;count<School.studentActNum;count++) {
+			if(School.stus[count].stuProvince.getProvince().equals(city)) {
+				School.show(count);
+			}else {
+				School.show(-1);
+			}
+		}
+	}
 }

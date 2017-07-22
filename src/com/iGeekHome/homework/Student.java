@@ -37,13 +37,22 @@ public class Student {
 		
 	}
 	
-//	public Student(StudentClass stuClass) {
-//		//StudentClass studentClass = new StudentClass();
-//		this.stuClass.setStudentClassName("32营");
-//		this.stuClass.setStuClassOpenTime("2017年7月11日");
-//		this.stuClass.setStuClassAdress("巨蟹座");
-//		
-//	}
+	public StudentProvince getStuProvince() {
+		return stuProvince;
+	}
+
+	public void setStuProvince(StudentProvince stuProvince) {
+		this.stuProvince = stuProvince;
+	}
+
+	public StudentClass getStuClass() {
+		return stuClass;
+	}
+
+	public void setStuClass(StudentClass stuClass) {
+		this.stuClass = stuClass;
+	}
+
 	public Student(String studentNo) {
 		this.studentNo=studentNo;
 	}
